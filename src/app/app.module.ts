@@ -1,20 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
+import { PerfilAsistenciaComponent } from './perfil-asistencia/perfil-asistencia.component';
+import {AsistenciaService} from './asistencia.service';
+import {HttpClientModule} from '@angular/common/http';
+import { QRCodeModule } from 'angular2-qrcode';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PerfilAsistenciaComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    AppRoutingModule,
+    HttpClientModule,
+    QRCodeModule,
+],
+providers:[AsistenciaService],
+bootstrap: [AppComponent]
 })
 export class AppModule { }
