@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule }   from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
 import { PerfilAsistenciaComponent } from './perfil-asistencia/perfil-asistencia.component';
 import {AsistenciaService} from './asistencia.service';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpModule} from '@angular/http';
 import { QRCodeModule } from 'angular2-qrcode';
 
 
@@ -18,8 +18,9 @@ import { QRCodeModule } from 'angular2-qrcode';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
-    HttpClientModule,
+    HttpModule,
     QRCodeModule,
 ],
 providers:[AsistenciaService],

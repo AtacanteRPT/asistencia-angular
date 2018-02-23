@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-
+import {Http} from '@angular/http';
+import 'rxjs/add/operator/map';
 @Injectable()
 export class AsistenciaService {
 
   base="http://192.241.152.146:1337/persona/21"
   constructor(
-    private http:HttpClient
+    private http:Http
   ) { }
-  getPersona():Observable<any>{
-    return this.http.get(this.base);
+  getPersona(){
+    return this.http.get(this.base)
+              .map(response => response.json());;
   }
 
 }

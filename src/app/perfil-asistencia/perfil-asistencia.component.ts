@@ -27,7 +27,8 @@ export class PerfilAsistenciaComponent implements OnInit,OnDestroy {
   }
 
   getPerfil(){
-    this.serve.getPersona().subscribe(data=>{
+    this.serve.getPersona()
+      .subscribe(data=>{
       console.log(data);
       this.perfil.nroMatricula=data.id;
         this.perfil.paterno=data.paterno;
