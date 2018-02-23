@@ -14,4 +14,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ##Dependencias
 
-Despues de correr 
+Despues de correr instalar `angular2-qrcode` -> npm i angular2-qrcode 
